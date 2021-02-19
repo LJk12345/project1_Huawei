@@ -1,0 +1,905 @@
+body{
+	background-color: #F9F9F9;
+}
+
+.Popup{
+	display: none;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	background-color:rgba(0,0,0,0.7);
+	z-index: 1005;
+}
+
+/*地址*/
+.Popup .addressPopup{
+   display:none ;
+   position: absolute;
+   height: 450px;
+   width: 800px;
+   background-color: white;
+   top:200px;
+   left: 400px;
+   
+}
+
+.Popup h4{
+	padding-top: 10px;
+	text-align: center;
+	line-height: 40px;
+	height: 60px;
+	width: 100%;
+}
+
+.closeBn{
+	cursor: pointer;
+	position: absolute;
+	right: 10px;
+	top: 0;
+	padding: 10px;
+}
+
+.addressPopup .message {
+ text-align: left;
+ padding: 20px;
+ margin-left: 30px;
+}
+
+.message i{
+	color: #CA151E;
+}
+
+
+.message span{
+	display: inline-block;
+	width: 80px;
+}
+
+
+
+.message input{
+	outline: none;
+	color: #333;
+	border: 1px solid #ccc;
+	height: 21px;
+	padding: 8px 12px;
+	font-size: 14px;
+	margin:0 20px 20px 0;
+}
+
+.message input:hover{
+	border: 1px solid #A1A1A1;
+}
+
+
+.message .addressee{
+	width:580px;
+}
+
+.message  .contactNumber{
+	width:223px;
+}
+
+.message  .addressSelect{
+	display: inline-block;
+	position: relative;
+}
+
+.message .errorAlert{
+    display: none;
+	margin: -20px 0 10px 85px;
+	font-size: 12px;
+	color: #FF6002;
+}
+
+.addressSelect .addressSelectShow {
+	color: #ccc;
+   width:580px;
+   padding: 8px 12px;
+   border: 1px solid #ccc;
+   cursor: pointer;
+   margin-bottom: 20px;
+
+}
+.addressSelectShow span{
+   display: inline-block;
+   width:560px;
+   
+}
+
+.addressSelect  .select_box {
+	
+   display: none;
+   position: absolute;
+   padding: 20px 12px;
+   width: 580px;
+   border: 1px solid #CA151E;
+   background-color: white;
+   top: 0;
+}
+
+.select_box .address_search{
+	width: 530px;
+	margin:0 auto;
+	border: 1px solid #ccc;
+}
+
+
+.select_box  .select_box_bn{
+	position: absolute;
+	top: 10px;
+	right: -55px;
+	cursor: pointer;
+	
+}
+.select_box .address_search i{
+	display: inline-block;
+	text-align: center;
+	 padding: 10px;
+	 float: left;
+    font-size:15.5px;
+    color: #A4A4A4;
+}
+
+.select_box .address_search input{
+    border: 0;
+    font-size: 14px;
+    width: 300px;
+    height: 100%;
+    padding: 10px;
+    margin: 0;
+}
+.select_box  p{
+	padding: 10px 0;
+	margin: 5px 0 10px 20px  ;
+	border-bottom: 1px solid #CCCCCC;
+	font-size: 14px;
+}
+.select_box  a{
+	cursor: pointer;
+	margin: 10px 0 10px 20px  ;
+	font-size: 12px;
+	color: #CA141D;
+}
+
+.addressSelect  textarea{
+	border: 1px solid #ccc;
+	outline: none;
+	padding: 8px 12px;
+	max-width:580px;
+	min-width:580px;
+	min-height:  78px;
+	max-height:  78px;
+}
+
+.addressPopupOperation{
+	text-align: center;
+	margin:5px auto;
+}
+.addressPopupOperation span{
+	display: inline-block;
+	cursor: pointer;
+	text-align: center;
+	padding: 10px;
+	width: 172px;
+	border: 1px solid #ccc;
+	margin: 0 5px;
+}
+
+
+/*发票*/
+.Popup .invoiceInformation{
+	padding:0  20px 20px 20px;
+	position: absolute;
+	display: none;
+	height: 600px;
+	width: 660px;
+	background-color: white;
+	top:100px;
+    left: 200px;
+}
+
+
+/*弹出窗口选项卡*/
+.label{
+	text-align: center;
+	border-bottom: 1px solid #A9A9A9;
+}
+
+
+.label span{
+	
+	cursor: pointer;
+	display: inline-block;
+	width: 120px;
+	margin: 0 5px;
+	padding: 15px 0;
+	
+}
+
+/*选项卡选定样式*/
+.labelSelect{
+	color: #CA151E;
+	border-bottom: 2px solid #CA151E;
+}
+
+.invoiceInformation .electron_box{
+	width: 440px;
+	margin:40px auto;
+	font-size: 12px;
+}
+
+.electron_box input[type=radio]{
+	margin-right: 10px;
+}
+
+.electron_box .personal_box{
+	margin: 20px ;
+}
+
+.electron_box  .titleName{
+	display: inline-block;
+	font-size: 14px;
+	color: #757575;
+	margin-right: 20px;
+	font-size: 12px;
+	width:80px;
+	
+}
+
+.electron_box  .titleName i{
+	color: #CA151E;
+}
+
+
+
+
+.electron_box  input[type=text]{
+	width: 240px;
+	outline: none;
+	padding: 2px;
+	border: 0;
+	border-bottom: 1px solid #3A3A3A;
+}
+
+
+
+.electron_box .erro_tips{
+	display: none;
+	width: 300px;
+	margin-left:110px ;
+	font-size: 12px;
+	color: #CA151E;
+}
+
+.electron_box .company{
+	display: none;
+	width: 300px;
+	margin-left: 70px;
+	
+	
+}
+.electron_box .company_box{
+	margin: 20px ;
+	display: none;
+}
+
+
+.electron_box .determine{
+	cursor: pointer;
+	text-align: center;
+	width: 200px;
+	padding: 10px;
+	font-size: 18px;
+	margin:45px auto;
+	background-color: #AB0009;
+	color: white;
+}
+
+.special_box{
+	display: none;
+}
+.special_box div{
+	
+	text-align: center;
+	width: 400px;
+	margin:10px auto 20px auto;
+}
+
+
+.special_box div i{
+	display: inline-block;
+	padding: 2px;
+	margin-right: 5px;
+	text-align: center;
+	line-height: 12px;
+	font-size: 12px;
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	background-color: #A4A4A4 ;
+	color: white;
+}
+
+.special_box div span{
+	font-size: 12px;
+	color: #A4A4A4;
+	
+}
+.special_box p {
+	margin:10px ;
+}
+
+
+.special_box p span{
+	display: inline-block;
+	padding:0 ;
+	width:100px;
+	margin-left: 40px;
+	font-size: 12px;
+	color: #A4A4A4;
+}
+.special_box p span i{
+	color:  #CA151E;
+}
+
+.special_erro_tips{
+	display: none;
+	width: 350px;
+	margin:-5px 0 0 150px ;
+	font-size: 12px;
+	color: #CA151E;
+}
+
+.special_box p  input{
+	width: 390px;
+	outline: none;
+	padding: 2px;
+	border: 0;
+	border-bottom: 1px solid #3A3A3A;
+}
+
+
+.special_box .nextStep{
+	cursor: pointer;
+	text-align: center;
+	padding: 5px 0;
+	width: 250px;
+	font-size: 20px;
+	border: 1px solid #A1A1A1;
+}
+
+
+.invoiceInformation_bottom{
+	
+	background-color: #ADADAD;
+	padding: 10px;
+	font-size: 12px;
+}
+
+.invoiceInformation_bottom p{
+   margin: 5px 0;
+   font-size: 14px;
+}
+
+.invoiceInformation_bottom a{
+   text-decoration: underline;
+   color: #CA151E;
+   font-size: 14px;
+}
+.invoiceInformation_bottom a::before{
+  content: '\e67f';
+   color: #CA151E;
+   font-size: 14px;
+}
+/*发票提示样式*/
+.red{
+	color:#CA151E;
+	font-size: 12px;
+}
+
+
+/*优惠券弹窗*/
+.Popup .coupon{
+	display: none;
+	position: absolute;
+	background-color: white;
+	width:698px;
+	height:480px;
+	top: 120px;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+.coupon .coupon_box{
+	width:668px;
+	height:340px;
+}
+
+.coupon .coupon_box div{
+	margin:20px auto;
+	display: flex;
+	width: 630px;
+    height: 260px;
+    background-color: #FAFAFA;
+    justify-content: center;
+}
+.coupon .coupon_box div span{
+	align-self: center;
+}
+
+.coupon .coupon_box p{
+	cursor: pointer;
+	margin: 0 auto ;
+	padding: 5px;
+	text-align: center;
+	border: 1px solid black;
+	width: 80px;
+	
+}
+
+.coupon .exchange{
+	 display: none;
+     width: 380px;
+     margin:15px auto;
+     background-color: white;
+
+}
+
+
+.exchange .elementName{
+	color: #A4A4A4;
+}
+
+.exchange input[type=text]{
+	outline: none;
+	padding: 2px;
+    width: 200px;	
+    margin: 0 20px;
+    border: 0;
+    border-bottom: 1px solid #A4A4A4;
+}
+
+.exchange input[type=button]{
+    width: 60px;	
+    background-color: white;
+    outline: none;
+    border-width: 1px;
+ 
+
+}
+.exchange div{
+	height: 50px;
+	margin:50px 0  90px 0;
+}
+
+.exchange .exchange_erro_tips{
+	display: none;
+	width: 200px;
+	margin:0 auto;
+	font-size: 12px;
+	color: #CA151E;
+	
+}
+
+
+
+.exchange  a{
+	display: inline-block;
+	cursor: pointer;
+	text-align: center;
+	width: 120px;
+	border: 1px solid #A9A9A9;
+	padding: 10px;
+	margin-left:25px;
+}
+
+.exchange  a:hover{
+
+	border-color: #000000;
+	
+}
+
+.exchange a:nth-of-type(2){
+	background-color: #CA151E;
+	color: white;
+	opacity: 0.8;
+}
+
+
+/*积分规则*/
+.integralRule{
+	display: none;
+	position: absolute;
+	background-color: white;
+	width:698px;
+	height:480px;
+	top: 120px;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+.integralRule [class = integralRule_box ],[class = petal_box ]{
+	display: none;
+	margin: auto;
+	overflow: hidden;
+	overflow-y: scroll;
+	box-sizing: border-box;
+	padding: 20px;
+	width: 90%;
+	height: 65%;
+	background-color: #FAFAFA;
+	box-shadow: 0 0 2px 0 #A9A9A9  inset;
+}
+
+/*积分使用规则内容*/
+.integralRule .integralRule_content{
+	margin: auto;
+	width: 100%;
+
+}
+
+.integralRule_content li{
+	margin-bottom: 30px;
+	color: #888888;
+}
+
+.integralRule_content h5::before{
+	content: "·";
+	font-size: 20px;
+	margin-right: 5px;
+}
+
+.integralRule_content  p{
+	text-indent: 2em;
+	font-size: 14px;
+	margin-top: 10px;
+}
+
+.integralRule_content div{
+      width:85%;
+      margin: auto;
+}
+.integralRule_content div a{
+	display: block;
+    font-size: 14px;
+    margin-top: 10px;
+    color: #888888;
+}
+
+/*花瓣使用规则内容*/
+.integralRule .petal_content li{
+	margin-bottom: 20px;
+	font-size:12px ;
+	color: #717171;
+}
+
+.integralRule .petal_content p{
+	margin-bottom: 25px;
+}
+
+.integralRule .petal_content a{
+	color:#81D0FA ;
+}
+
+
+.integralRule_bn{
+	margin-top: 30px;
+	text-align: center;
+} 
+.integralRule_bn span{
+	cursor: pointer;
+	font-size: 18px;
+	border: 1px solid #A4A4A4; 
+	padding: 15px 60px;
+	
+}
+
+.integralRule_bn span:hover{
+
+	border-color: #3A3A3A; 
+	
+	
+}
+
+
+/*内容*/
+.content{
+   padding: 20px;
+	width: 1200px;
+	margin:10px auto;
+}
+
+
+.content .address{
+	margin: 20px;
+	
+	padding: 15px 0 40px 30px;
+	background-color: white;
+	text-align: left;
+	
+}
+
+.content .address h3{
+	font-weight: normal;
+	margin-bottom: 15px;
+	
+}
+
+.content .address_box::after{
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.address_box ul{
+	width: 358px;
+	height: 120px;
+	border: 1px solid #A4A4A4 ;
+	cursor: pointer;
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+#default{
+	height: 112px;
+	width: 348px;
+	border-width:5px;
+	border-image: url(../img/border_01.png) 5 5 5 5 round ;
+}
+
+
+
+
+.address_box .addressList{
+	float: left;
+	position: relative;
+}
+.address_box .addressList:hover{
+	border:1px solid #CA151E;
+}
+
+.address_box .addressList .identification{
+	position: absolute;
+	text-align: center;
+	font-size: 12px;
+	color: white;
+	width: 70px;
+	top: -10px;
+	left: -5px;
+	background-color: #a4a4a4;;
+}
+
+.addressList .addressList_operation{
+	display: none;
+}
+
+
+.address_box .addressList li{
+	margin: 10px ;
+}
+
+.address_box .addressList p{
+	margin: 10px;
+	color: #CCCCCC;
+}
+
+.address_box .addressList .addressList_addressee{
+	display: inline-block;
+	width: 50%;
+}
+.address_box .addressList .addressList_phone{
+	display: inline-block;
+	text-align: right;
+	width: 50%;
+}
+
+.address_box .addressList div{
+   position: absolute;
+   bottom: 10px;
+   right: 10px;
+}
+.address_box .addressList div span{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+
+.address_box  .createAddress{
+    text-align: center;
+	line-height: 120px;
+	float: left;
+
+}
+
+
+.content .order_list{
+	width: 1100px;
+	display: flex;
+	margin: auto;
+	padding: 30px;
+	background-color: white;
+	
+}
+
+.content .order_list .order_list_left{
+	width: 740px;
+	border: 1px solid #A4A4A4;
+	
+}
+
+.order_list_left .PurchaseInformation{
+	padding: 20px 20px 0 20px;
+}
+.PurchaseInformation .title{
+	width: 100px;
+	max-height: 100px;
+	min-height:60px;
+	
+}
+
+.PurchaseInformation ul{
+	display: flex;
+	margin-bottom:30px;
+}
+
+.PurchaseInformation .Information{
+	display: flex;
+	margin-left: 10px;
+	border-bottom: 1px solid #A4A4A4;
+	
+}
+
+.Information img{
+	width: 36px;
+	height: 36px;
+}
+
+
+.Information .name{
+	text-align: left;
+	width: 360px;
+	font-size: 16px;
+}
+
+.Information .num{
+	text-align: center;
+	width: 100px;
+	font-size: 14px;
+    margin-left: 20px;
+    
+}
+
+.Information .price{
+	text-align: center;
+	width: 100px;
+	font-size: 16px;
+	font-weight: bold;
+    margin-left: 20px;
+}
+
+.reimbursement{
+	padding: 20px;
+	border-top: 1px solid #A4A4A4;
+}
+
+.reimbursement li{
+	display: flex;
+}
+
+.reimbursement li span{
+	display: inline-block;
+	width: 100px;
+	font-size: 18px;
+}
+
+.invoiceInformation_tips{
+	font-size: 12px;
+	color: #A4A4A4;
+}
+.invoice{
+	margin: 10px 0;
+	color: #3a3a3a;
+	font-size: 16px;
+}
+
+.invoice a{
+	cursor:pointer;
+	color:  #A4A4A4;
+	font-size: 16px;
+	text-decoration: underline;
+}
+
+.concessions_credits a{
+	cursor: pointer;
+	text-decoration: underline;
+	color:#A4A4A4;
+	margin-left: 5px;
+}
+.order_list .order_list_right{
+	position: relative;
+	padding: 20px;
+	background-color: #F6F6F6;
+	border: 1px solid #A4A4A4;
+	border-left: 0;
+	
+}
+.order_list_right p{
+	font-size: 18px;
+	
+}
+
+.order_list_right p i{
+	color: #CA141D;
+	
+}
+.order_list_right .distribution{
+	position: relative;
+	margin-left: 25px;
+	margin-top: 10px;
+	font-size:12px;
+	color: #666;
+}
+.order_list_right  .distribution::before{
+	position: absolute;
+	left: -25px;
+	font-size: 20px;
+	color: #CA141D;
+	content: '\e626';
+}
+
+.order_list_right .priceClearing{
+	position: absolute;
+	bottom: 0;
+}
+.priceClearing ul{
+	display: flex;
+	margin-bottom:10px;
+}
+.priceClearing ul li{
+	font-size:14px ;
+   width: 108px;
+   text-align: right;
+}
+.priceClearing ul .settlement{
+	color: #CA151E;
+	font-size:20px ;
+}
+
+
+.content  .pay{
+	width: 1165px;
+	margin: auto;
+	background-color: white;
+    margin-top: 20px;
+	text-align: right;
+}
+
+.pay .payable{
+font-size: 18px;
+}
+
+.payable span{
+font-size: 30px;
+color: #CA141D;
+}
+
+.pay .integral{
+	font-size: 14px;
+	margin: 8px 0;
+}
+
+
+
+.pay input{
+	cursor: pointer;
+	outline: none;
+	border: 0;
+	margin: 5px 0;
+	width: 172px;
+    height: 46px;
+    background: #ca141d;
+    color: #fff;
+}

@@ -1,0 +1,307 @@
+
+
+.server_banner{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.server_banner_box{
+	position: relative;
+	height: 450px;
+	width: 1886px;
+}
+
+.server_banner_box a{
+	display: block;
+	background: 50% 0px no-repeat; 
+    width: 100%; 
+    height: 100%; 
+    position: absolute; 
+    opacity: 1;
+}
+
+
+.banner_bn{
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+	width: 120px;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    margin: auto;
+	
+}
+.banner_bn span{
+	border: 1px solid white;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	
+}
+
+
+body [class=content1_box],[class=content2_box]{
+	width: 1200px;
+	margin:0 auto;
+}
+
+.server_title{
+	padding-top: 32px;
+	margin-bottom:10px ;
+	font-size: 26px;
+}
+
+.content1_box .self-service {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+
+
+.content1_box .self-service li{
+	text-align: center;
+    width: 168px;
+    height: 168px;
+    margin-right: 70px;
+    margin-bottom: 32px;
+    border-radius: 10px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.content1_box .self-service li:hover{
+     box-shadow: 0 0 15px 0 #BBBBBB ;
+}
+
+
+.content1_box .self-service li a img{
+	display: block;
+    margin: 24px auto;
+    width: 72px;
+    height: 72px;
+}
+
+
+
+
+.advertisement{
+	display: block;
+	width: 100%;
+	height: 120px;
+	background-image: url(../img/advertisement.jpg);
+}
+
+.content1_box ul:nth-of-type(2){
+	overflow: hidden;
+}
+
+
+.content1_box ul:nth-of-type(2) li{
+	float: left;
+    width: 588px;
+    min-height: 134px;
+    background: #f9f9f9;
+    border: 1px solid #f3f3f3;
+    margin: 20px   20px 20px 0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.content1_box ul:nth-of-type(2) li span{
+	padding:0 20px;
+}
+
+
+.content1_box ul:nth-of-type(2) li img{
+	padding-right:20px;
+	width: 50px;
+	height: 50px;
+	vertical-align: middle;
+	border-right: 1px solid rgb(243,243,243);
+}
+
+.content1_box ul:nth-of-type(2) div{
+	display: inline-block;
+	height: 100%;
+}
+.content1_box ul:nth-of-type(2)  b{
+	    display: block;
+	    color: #cea775;
+	    margin-bottom: 10px;
+}
+
+.content1_box ul:nth-of-type(2)  p{
+	margin-bottom: 20px;
+}
+
+.content1_box ul:nth-of-type(2)  a{
+	font-size: 14px;
+    color: #9f9f9f;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 4px;
+}
+.content1_box ul:nth-of-type(2)  a:hover{
+	
+    color: #CA151E;
+}
+
+.content2{
+	background-color: #F0F0F0;
+}
+
+.content2_box div{
+	background-color: white;
+	border-radius: 10px;
+	overflow: hidden;
+
+}
+.product_list ul{
+	display: flex;
+	justify-content:  space-around;
+}
+.product_list li{
+	position: relative;
+}
+.product_list li img{
+	display: block;
+	width: 130px;
+    height: 130px;
+    margin: 0 auto;
+   
+}
+
+
+.product_list li p{
+	color: #000;
+    font-size: 20px;
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 43px;
+   
+}
+
+.product_list li dl{
+	display: none;
+    position: absolute;
+    bottom: 0;
+    left: -30px;
+    width: 190px;
+    height: 262px;
+    z-index: 5;
+    background-color: rgba(51,51,51,0.95);
+}
+
+.product_list li dl dt span{
+    color: #fff;
+    font-size: 16px;
+}
+
+.product_list li dl  a{
+    color: #fff;
+    font-size: 16px;
+}
+
+.product_list li dl dd,dt{
+	 padding:5px 0 5px 10px;
+	 box-sizing: border-box;
+   
+}
+
+.product_list li dl dd:hover{
+	cursor: pointer;
+     background-color: rgba(74,74,74);
+}
+
+
+
+
+.contact_customer_service{
+	padding: 40px;
+	overflow: hidden;
+}
+.contact_customer_service .contact_left{
+	float: left;
+}
+.contact_left li{
+	display: flex;
+	margin-bottom: 20px;
+	align-items: center;
+}
+
+.contact_left li span:nth-of-type(1){
+	width: 62px;
+	height: 62px;
+	background-image: url(../img/tu.png);
+	margin-right: 20px;
+}
+
+.contact_left li span:nth-of-type(2) p:nth-child(1) i{
+	font-size: 18px;
+}
+
+.contact_left li span:nth-of-type(2) p:nth-child(1) a{
+	display: inline-block;
+	width: 110px;
+    height: 26px;
+   line-height: 26px;
+    background: #ddb076;
+    text-align: center;
+    color: #fff;
+    border-radius: 2px;
+    margin-left: 28px;
+}
+
+.contact_left li span:nth-of-type(2) p:nth-child(2){
+	margin-top: 10px;
+    color: #acacac;
+   
+}
+
+.contact_customer_service .contact_right{
+    float: right;
+    width: 670px;
+    height: 280px;
+    border-left: 1px solid #eaeaea;
+}
+
+ .contact_right ul{
+   display: flex;
+   justify-content:  space-around;
+}
+.contact_right ul li{
+   width: 140px;
+   text-align: center;
+}
+
+.contact_right ul li i{
+   font-size: 40px;
+   color: #CECECE;
+}
+
+.contact_right ul li img{
+   width: 140px;
+   height: 140px;
+}
+
+
+.contact_customer_service .contact_right > p{
+    font-size: 16px;
+    color: #acacac;
+    text-align: center;
+    margin-top: 30px;
+   
+}
+
+
+.content2_box a img{
+	width: 100%;
+	height: 400px;
+	margin-bottom: 32px;
+	border-radius: 10px;
+	
+}

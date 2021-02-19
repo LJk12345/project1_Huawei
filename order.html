@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="./css/public.css" />
+		<link rel="stylesheet" type="text/css" href="./css/iconfont.css" />
+		<script src="js/data.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/public.js" type="text/javascript" charset="utf-8"></script>
+
+		<script src="js/order.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="./css/order.css" />
+
+	</head>
+
+	<body class="iconfont">
+		<div class="Popup">
+			<div class="addressPopup">
+				<h4>-添加地址-</h4>
+				<span><i class="closeBn close">&#xe618;</i></span>
+				<div class='message'>
+					<div><span><i>*</i>收货人:</span> <input class="addressee in" type="text" value="" /></div>
+					<div>
+						<span><i>*</i>手机号码:</span>
+						<input class="contactNumber in ph1" type="text" value="" placeholder="请输入11位手机号码" />
+						<span>备选号码</span>
+						<input class="contactNumber in ph2" type="text" value="" placeholder="固话或其他手机号码" />
+						<p class="errorAlert">&#xe67f; <i style="color:#FF6002 ;"></i></p>
+					</div>
+					<div>
+						<span style="vertical-align: top;"><i>*</i>收货地址:</span>
+						<div class="addressSelect">
+							<div class="addressSelectShow">
+								<span>选择省-市-区-街道</span><i style="color: #ccc;">&#xe60f;</i>
+							</div>
+							<div class="select_box">
+								<span class="select_box_bn ">&#xe618;</span>
+								<div class="address_search">
+									<i>&#xe601;</i>
+									<input type="text" placeholder="输入街道、乡镇、小区或商圈名称" />
+								</div>
+								<p>例如：深圳天安云谷</p>
+								<a>直接选择地址></a>
+							</div>
+							<p><textarea class="in" placeholder="如选择不到您的地区，请在此处详细描述"></textarea></p>
+						</div>
+					</div>
+				</div>
+				<div class="addressPopupOperation"><span class="close">取消</span><span style="color: white; background-color: #CA151E;" class="save">保存并使用</span></div>
+			</div>
+			<div class="invoiceInformation">
+				<h4>-发票信息-</h4>
+				<span><i class="closeBn close">&#xe618;</i></span>
+				<p class="label"><span class="electron labelSelect">电子普通发票</span><span class="special">专用发票</span></p>
+				<div class="electron_box">
+					<p>
+						<input name="a" type="radio" checked="checked" value="个人" /><span>个人</span>
+					</p>
+					<div class="personal_box">
+						<span class="titleName"><i>*</i>发票抬头</span><input class="personal" type="text" value="个人" placeholder="请输入发票抬头" />
+						<p class="erro_tips">&#xe67f;请输入发票抬头</p>
+					</div>
+					<p>
+						<input name="a" type="radio" value="单位" /><span>单位</span> <input class="company" type="text" placeholder="请输入单位名称" />
+					</p>
+					<div class="company_box">
+						<span class="titleName"><i>*</i>纳税人识别号</span> <input class="identificationNumber" type="text" placeholder="请按税务登记证填写" />
+						<p class="erro_tips">&#xe67f;请填写纳税人识别号</p>
+					</div>
+					<p class="determine">确定</p>
+				</div>
+				<div class="special_box">
+					<div><i style="background-color:#CA151E ;">1</i><span style="color: #CA151E;">填写公司信息</span> > <i>2</i><span>填写收票人信息</span></div>
+					<p><span><i>*</i>单位名称</span><input type="text" /></p>
+					<a class="special_erro_tips">&#xe67f;请填写单位名称</a>
+					<p><span><i>*</i> 纳税人识别号</span><input id="identificationNumber" type="text" /></p>
+					<a class="special_erro_tips">&#xe67f;请填写纳税人识别号</a>
+					<p><span><i>*</i> 注册地址</span><input type="text" /></p>
+					<a class="special_erro_tips">&#xe67f;请填写注册地址</a>
+					<p><span><i>*</i> 注册电话</span><input id="registrationTelephone" type="text" /></p>
+					<a class="special_erro_tips">&#xe67f;请填写注册电话</a>
+					<p><span><i>*</i> 开户银行</span><input type="text" /></p>
+					<a class="special_erro_tips">&#xe67f;请填写开户银行</a>
+					<p><span><i>*</i> 银行帐户</span><input type="text" /></p>
+					<a class="special_erro_tips">&#xe67f;请填写银行账户</a>
+					<div class="nextStep">下一步</div>
+				</div>
+				<div class="invoiceInformation_bottom">
+					<p>温馨提示：</p>
+					<p>1、订单签收24小时后即可在订单详情下载您的电子普通发票。</p>
+					<a href="#">什么是电子发票?</a>
+					<p>2、若发票开具后，您要同时更改发票的抬头和税号，需提供授权函，为了您的方便，请一次性填对发票信息，谢谢。</p>
+				</div>
+			</div>
+			<div class="coupon">
+				<h4>-使用优惠券-</h4>
+				<span><i class="closeBn close">&#xe618;</i></span>
+				<p class="label"><span id="a" class="available labelSelect">可用优惠券</span><span id="a" class="notAvailable">不可用优惠券</span><span id="n" class="availableNum">优惠券码</span></p>
+				<div class="coupon_box">
+					<div>
+						<span>暂无优惠券</span>
+					</div>
+					<p class="close">关闭</p>
+				</div>
+				<div class="exchange">
+					<div>
+						<span class="elementName">优惠券码</span>
+						<input type="text" /><input type="button" value="确定" />
+						<p class="exchange_erro_tips">&#xe67f;请输入正确的优惠券编码</p>
+					</div>
+					<a class="close">不使用优惠券</a>
+					<a>立即使用</a>
+				</div>
+
+			</div>
+			<div class="integralRule">
+				<h4>-积分使用规则-</h4>
+				<span><i class="closeBn close">&#xe618;</i></span>
+				<div class="integralRule_box">
+					<ul class="integralRule_content">
+						<li>
+							<h5>Vmall积分是什么？</h5>
+							<p>积分是用户在Vmall网站（www.vmall.com）进行购物行为时给予的回馈。积分仅可在Vmall使用，每100积分可在购物付款时抵扣1元。如遇用户帐号暂停使用等场景，Vmall将暂停该用户帐号内积分相关使用权益。获得但未使用的积分，将在下一个自然年底过期（例如2017年12月31日将清空用户在2016年度获得但未使用的积分），Vmall将对过期积分进行作废处理，请注意及时使用。</p>
+						</li>
+						<li>
+							<h5>如何获取积分？</h5>
+							<p>1.在Vmall购买自主品牌商品可获得实际支付金额（不含运费）数值的10%的积分，规则如下（具体请以页面提示为准）：</p>
+							<div>
+								<a>1) 必须是购买自主品牌实物产品订单（代销商品、虚拟商品、企业购商品不赠送积分），积分发放时小数点后数字按四舍五入计算，例如：购买999元的产品，发放100个积分；</a>
+								<a>2) 实际支付金额是指用户实际以银行卡/第三方支付/Vmall代金券等支付的金额，不包括订单中使用花瓣、积分以及各种形式的优惠券等发生的抵扣；</a>
+								<a>3) 订单完成（订单已显示完成且未办理退货手续）才可获得积分，积分会在订单完成后回馈到用户的个人中心；</a>
+								<a>4) 如订单包含不同类型商品，将按照上述规则对商品金额进行计算，具体以页面显示为准。</a>
+							</div>
+							<p>2. 用户在华为商城参加签到、评价商品参与积分翻倍购等促销活动时，可获赠积分，具体以活动规则为准。</p>
+						</li>
+						<li>
+							<h5>如何使用积分？</h5>
+							<p>1. 用户可在订单结算页面使用积分抵扣订单金额，积分使用的最小值是1；商品是否可用积分抵扣以实际页面提示为准； </p>
+							<p>2. 当前Vmall的抢购商品、优购码商品、优享购商品、企业购商品、代销和虚拟商品不支持使用积分抵扣；</p>
+							<p>3. 使用积分、花瓣及其他优惠时，可用花瓣、积分抵扣不超过订单中可抵扣商品实付金额的30%；</p>
+							<p>4. 当订单中包含多个商品时，该笔订单可用积分抵扣的上限为所有允许使用积分支付的商品的实付金额上限之和的30%；使用积分支付的订单，消费的积分会在各个商品中按一定比例进行分摊；</p>
+							<p>5. 订单一经提交无法再修改积分使用数量，如需修改请重新提交订单，用户自行取消订单后积分将在一定时间内返还到账户；</p>
+							<p>6. 积分不可兑现、不可跨帐号使用，且使用积分抵扣部分不开发票，使用积分抵扣部分作为销售折扣行在发票上单独列示。</p>
+							<p>*企业购订单不能产生和使用积分</p>
+						</li>
+					</ul>
+				</div>
+				<div class="petal_box">
+					<ol class="petal_content">
+						<li>
+							<h6>1、 什么是花瓣？</h6>
+							<p>花瓣是华为消费者业务推出的一种虚拟货币，当前的“汇率”是0.01（100花瓣=1元人民币），从获取花瓣之日起2年内有效。</p>
+						</li>
+						<li>
+							<h6>2、如何获取花瓣？</h6>
+							<p>花瓣可在花粉俱乐部通过登录、签到、发帖、回帖、参加活动等形式获取。
+								<a href="#">了解更多>></a>
+							</p>
+						</li>
+						<li>
+							<h6>3、如何查看花瓣？</h6>
+							<p>花瓣的消费及返还记录可以在“个人中心”—
+								<a href="@">"我的花瓣"</a>中查看。中查看</p>
+						</li>
+						<li>
+							<h6>4、如何使用花瓣？</h6>
+							<p>花瓣的消费及返还记录可以在1) 用户可在填写订单页面使用花瓣抵扣订单金额，商品是否可以使用花瓣支付以实际订单页面提示为准。</p>
+							<p>花瓣的消费及返还记录可以在2) 所有允许使用花瓣支付的商品最多可用花瓣抵扣30%金额。</p>
+							<p>3) 当订单中包含多个商品时，该笔订单可用花瓣抵扣的上限为所有允许使用花瓣支付的商品的花瓣支付上限之和。使用花瓣支付的订单，消费的花瓣会在各个商品中按商品单价从高到低顺序进行分摊。</p>
+							<p>4) 订单一经提交无法再修改花瓣使用数量，如需修改请重新提交订单，用户自行取消订单后花瓣将于10分钟后返还账户。</p>
+							<p>5) 花瓣不可兑现，且不开发票。</p>
+						</li>
+						<li>
+							<h6>5、退货时消费的花瓣如何返还？</h6>
+							<p>使用花瓣支付的订单若产生退货 ，花瓣将不予退回。</p>
+						</li>
+					</ol>
+				</div>
+
+				<p class="integralRule_bn"><span class="close">知道了</span></p>
+			</div>
+
+		</div>
+		<div class="suspendedNav ">
+			<li>
+				<span>&#xe633;</span>
+				<p></p>
+				<a href="./shoppingCart.html">购物车<i>&#xe615;</i></a>
+			</li>
+			<li>
+				<span>&#xe6b0;</span>
+				<a href="">在线客服 <i>&#xe615;</i></a>
+			</li>
+			<li>
+				<span>&#xe74d;</span>
+
+				<a href="service.html">自主服务<i>&#xe615;</i></a>
+			</li>
+		</div>
+		<div class="shortcut">
+			<div class="shortcut_box">
+				<ul class="shortcut_left shortcut_ul">
+					<li>
+						<a href="#">首页</a>
+					</li>
+					<li>
+						<a href="#">华为官网</a>
+					</li>
+					<li>
+						<a href="#">荣耀官网</a>
+					</li>
+					<li>
+						<a href="#">花粉俱乐部</a>
+					</li>
+					<li>
+						<a href="#">V码(优购码)</a>
+					</li>
+					<li>
+						<a href="#">企业购</a>
+					</li>
+					<li>
+						<a href="#">Select Region</a>
+					</li>
+					<li class="moreExciting downList">
+						更多精彩 <span>&#xe60f;</span>
+						<div class="box">
+							<a href="#">应用市场</a>
+							<a href="#">华为终端云空间</a>
+							<a href="#">开发者联盟</a>
+						</div>
+					</li>
+				</ul>
+				<ul class="shortcut_right shortcut_ul">
+					<li>
+						<a href="logIn.html">请登录</a>
+						<a href="registerph.html">注册</a>
+					</li>
+					<li>
+						<a href="#">我的订单</a>
+					</li>
+					<li class="service downList">
+						客户服务<span>&#xe60f;</span>
+						<div class="box">
+							<a href="#">服务中心</a>
+							<a href="#">联系客服</a>
+						</div>
+					</li>
+					<li class="shortcut_Website downList">
+						网站导航<span>&#xe60f;</span>
+						<div class="box">
+							<div class="home">
+								<a id="home_log">
+									<i class="home_log"></i>
+									<a href="">商城首页</a>
+								</a>
+							</div>
+							<ul class="Website_ul">
+								<li>
+									<h1>频道</h1>
+									<div class="shortcut_Website_list">
+										<div class="list_left">
+											<a>华为专区</a>
+											<a>企业购</a>
+										</div>
+										<div class="list_right">
+											<a>荣耀专场</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h1>产品</h1>
+									<div class="shortcut_Website_list">
+										<div class="list_left">
+											<a>手机</a>
+											<a>平板</a>
+											<a>智能家居</a>
+											<a>耳机音箱</a>
+											<a>生态产品</a>
+										</div>
+										<div class="list_right">
+											<a>笔记本</a>
+											<a>智能穿戴</a>
+											<a>智慧屏</a>
+											<a>热销配件</a>
+											<a>增值服务</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h1>增值服务</h1>
+									<div class="shortcut_Website_list">
+										<div class="list_left">
+											<a>以旧换新</a>
+											<a>一口价换电池</a>
+										</div>
+										<div class="list_right">
+											<a>补购保障</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h1>会员</h1>
+									<div class="shortcut_Website_list">
+										<div class="list_left">
+											<a href="">会员频道</a>
+										</div>
+										<div class="list_right">
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="shortcut_mobileTerminal downList">
+						手机版<span>&#xe60f;</span>
+						<div class="box">
+							<div class="container">
+								<a style="background-image: url(img/FWETOIrFlCrX4xuB8E16.png); background-size: cover;" href=""></a>
+								<div class="introduce">
+									<h3>华为商城APP</h3>
+									<p>新人专享好礼</p>
+									<p>最高5000积分</p>
+									<h4>
+										<i>&#xe681;
+									<dd>Android</dd>
+									</i>
+									<i>&#xe639;
+									<dd>iPhone</dd>
+									</i>
+									<i>&#xe602;
+									<dd>WeChat</dd>
+									</i>
+									</h4>
+								</div>
+							</div>
+							<div class="container middle">
+								<a style="background-image: url(img/20181116180507506.jpg); background-size: cover;" href=""></a>
+								<div class="introduce">
+									<h3>华为商城公众号</h3>
+									<h4>微信扫一扫</h4>
+									<h4><i>&#xe602;
+									<dd>WeChat</dd>
+									</i></h4>
+								</div>
+							</div>
+							<div class="container">
+								<a style="background-image: url(img/6Y7SW4v4hnJ9kl9fDC9d.jpg); background-size: cover;" href=""></a>
+								<div class="introduce">
+									<h3>微信小程序</h3>
+									<h4><i>&#xe602;
+									<dd>WeChat</dd>
+									</i></h4>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="top">
+			<div class="top_box">
+				<div class="top_box_left">
+					<img src=" img/logo_1.png" />
+					<span>确认订单</span>
+				</div>
+				<div class="top_box_right">
+					<p><i style="color:#656565;">&#xe6f1;</i><span class="Line" style="background-color: #656565;"></span>
+						<i style="color:#656565;">&#xe626;</i><span class="Line"></span>
+						<i>&#xe663;</i>
+					</p>
+					<div><span>我的购物车</span><span>填写核对订单</span><span>成功提交订单</span></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="content">
+			<div class="address">
+				<h3>收货地址</h3>
+				<div class="address_box">
+					<ul id="default" class="addressList">
+						<span class="identification">默认地址</span>
+						<li><span class="addressList_addressee">兰进坤</span><span class="addressList_phone">18354525023</span></li>
+						<p><span class="region">山东 烟台 栖霞市 庄园街道</span> <i>粮贸中心院内</i></p>
+						<div class="addressList_operation">
+							<span class="edit"><i style="color: #DC143C;">&#xe619;</i>编辑</span>
+							<span class="deleteAddress"><i style='color: #DC143C;'>&#xe6f5;</i>删除</span>
+							<span class="identificationBn" style="display: none;"><i style='color: #DC143C;'>&#xe798;</i>设为默认</span>
+						</div>
+
+					</ul>
+					<ul class="addressList">
+						<li><span class="addressList_addressee">兰进坤</span><span class="addressList_phone">18354525023</span></li>
+						<p><span class="region">山东 烟台 栖霞市 庄园街道</span> <i>粮贸中心院内</i></p>
+						<div class="addressList_operation">
+							<span class="edit"><i style="color: #DC143C;">&#xe619;</i>编辑</span>
+							<span class="deleteAddress"><i style='color: #DC143C;'>&#xe6f5;</i>删除</span>
+							<span class="identificationBn"><i style='color: #DC143C;'>&#xe798;</i>设为默认</span>
+						</div>
+					</ul>
+					<ul class="createAddress ">
+						<span>&#xe6f8; 新增收货地址</span>
+					</ul>
+
+				</div>
+			</div>
+
+			<div class="order_list">
+				<div class="order_list_left">
+					<div class="PurchaseInformation">
+						<ul>
+							<img class="title" src="img/list1.png" />
+							<div class="Information">
+								<li class="name">华为畅享20 5G 6GB+128GB 全网通版（亮黑色）</li>
+								<li class="num">x1</li>
+								<li class="price">¥ 1899.00</li>
+							</div>
+						</ul>
+						<ul>
+							<p class="title" class="nature">配</p>
+							<div class="Information">
+								<li class="name"><img src="img/zeng.png" />华为 AM115 半入耳式耳机（白色）</li>
+								<li class="num">x1</span>
+									<li class="price"></li>
+							</div>
+						</ul>
+						<ul>
+							<p class="title">赠品</p>
+							<div class="Information" style="border-bottom: 0;">
+								<p>
+									<li class="name">&#xe617; 优酷七天VIP会员</li>
+									<li class="num">x1</li>
+									<li class="price"></li>
+								</p>
+							</div>
+						</ul>
+					</div>
+					<div class="reimbursement">
+						<li>
+							<span>发票信息</span>
+							<div>
+								<p class="invoiceInformation_tips">注：如果商品由第三方卖家销售，发票内容由其卖家决定，发票由卖家开具并寄出</p>
+								<p class="invoice">电子普通发票 <i>个人 </i>
+									<a>修改</a>
+								</p>
+							</div>
+
+						</li>
+						<li class="concessions_credits">
+							<span>优惠与抵用</span>
+							<div>
+								<p><i style="color: #CA141D;">&#xe617;</i>
+									<a id="coupon" style="color:#CA141D ;">使用优惠券</a>
+								</p>
+								<p><input type="checkbox" />&nbsp;&nbsp;&nbsp;共5积分
+									<a class="integral">积分规则</a>
+								</p>
+								<p><input type="checkbox" />&nbsp;&nbsp;&nbsp;花瓣余额 0，不足100不可使用
+									<a class="petal">花瓣使用规则</a>
+								</p>
+							</div>
+						</li>
+					</div>
+				</div>
+				<div class="order_list_right">
+					<p>商品由 <i>华为商城</i> 选择合作快递</p>
+					<div class="distribution">
+						<p style="font-size:14px;">标准配送</p>
+						<p style="font-size: 12px;">预计12月9日前发货<i>&#xe60e;</i></p>
+					</div>
+					<div class="priceClearing">
+						<ul>
+							<li>商品总金额：</li>
+							<li>¥ <i>4598.00</i></li>
+						</ul>
+						<ul>
+							<li>运费：</li>
+							<li>¥ <i>0.00<i></li></ul>
+		    			<ul><li>优惠金额：</li><li>- ¥ <i>0.00<i></li></ul>
+		    			<ul><li>结算金额：</li><li class="settlement">¥ <i>4598.00<i></li></ul>
+		    		</div>
+		    	</div>
+		    </div>	
+		    
+		    
+		     <div class="pay">
+		    	 <p class="payable">应付总额:  <span>¥<i>4598.00</i></span>
+								</p>
+								<p class="integral">可获得积分：190</p>
+								<p>
+									<a href="pay.html"><input type="submit" value="提交订单" /></a>
+								</p>
+					</div>
+				</div>
+
+				<!--页面底部-->
+				<div class="footer " style="margin-top: 0;">
+					<div class="footer_box">
+						<div class="footer_top">
+							<a href=""><img src="./img/produceShow/footerLogo (1).gif" /><span>百强企业 品质保证</span></a>
+							<a href=""><img src="./img/produceShow/footerLogo (2).gif" /><span>7天退货 15天换货</span></a>
+							<a href=""><img src="./img/produceShow/footerLogo (4).gif" /><span> 48元起免运费</span></a>
+							<a href=""><img src="./img/produceShow/footerLogo (3).gif" /><span>2000家服务店 全国联保</span></a>
+						</div>
+						<div class="footer_middle">
+							<div class="footer_middle_left">
+								<ul>
+									<li>保修与退换货</li>
+									<li>
+										<a href="">保修政策</a>
+									</li>
+									<li>
+										<a href="">退换货政策</a>
+									</li>
+									<li>
+										<a href="">退换货流程</a>
+									</li>
+									<li>
+										<a href="">保修状态查询</a>
+									</li>
+									<li>
+										<a href="">配件防伪查询</a>
+									</li>
+								</ul>
+								<ul>
+									<li>维修与技术支持</li>
+									<li>
+										<a href="">服务店</a>
+									</li>
+									<li>
+										<a href="">预约维修</a>
+									</li>
+									<li>
+										<a href="">手机寄修</a>
+									</li>
+									<li>
+										<a href="">备件价格查询</a>
+									</li>
+									<li>
+										<a href="">上门服务</a>
+									</li>
+								</ul>
+								<ul>
+									<li>特色服务</li>
+									<li>
+										<a href="">防伪查询</a>
+									</li>
+									<li>
+										<a href="">补购保障</a>
+									</li>
+									<li>
+										<a href="">以旧换新</a>
+									</li>
+									<li>
+										<a href="">礼品包装</a>
+									</li>
+								</ul>
+								<ul>
+									<li>关于我们</li>
+									<li>
+										<a href="">公司介绍</a>
+									</li>
+									<li>
+										<a href="">华为商城简介</a>
+									</li>
+									<li>
+										<a href="">华为零售店</a>
+									</li>
+									<li>
+										<a href="">荣耀零售店</a>
+									</li>
+									<li>
+										<a href="">商家中心</a>
+									</li>
+									<li>
+										<a href="">意见反馈</a>
+									</li>
+
+								</ul>
+								<ul>
+									<li>友情链接</li>
+									<li>
+										<a href="">华为集团</a>
+									</li>
+									<li>
+										<a href="">华为CBG官网</a>
+									</li>
+									<li>
+										<a href="">荣耀官网</a>
+									</li>
+									<li>
+										<a href="">花粉俱乐部</a>
+									</li>
+									<li>
+										<a href="">华为云</a>
+									</li>
+								</ul>
+							</div>
+							<div class="footer_middle_right">
+								<h1>950805</h1>
+								<p>7x24小时客服热线（仅收市话费）</p>
+								<a href="" class="onlineService"><span>&#xe6b0;</span> 在线客服</a>
+								<div>关注Vmall：
+									<a id="weixin" href="">&#xe602;</a>
+									<a href="">&#xe60c;</a>
+									<a href="">&#xe625;</a>
+									<a href="">&#xe7b2;</a>
+									<div class="service-code-img">
+										<img src="./img/produceShow/weixin.png" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="footer_bottom">
+							<img src=' ./img/produceShow/logo.png' />
+							<div>
+								<p class="footer_bottom_up">
+									<a href="">华为集团</a> |
+									<a href="">华为CBG官网</a> |
+									<a href="">荣耀官网</a> |
+									<a href="">花粉俱乐部</a> |
+									<a href="">华为应用市场</a> |
+									<a href="">EMUI</a> |
+									<a href="">华为终端</a> |
+									<a href="">云空间</a> |
+									<a href="">开发者联盟</a> |
+									<a href="">华为商城手机版</a> |
+									<a href="">网站地图</a>
+								</p>
+								<p class="footer_bottom_down">
+									<a href="">隐私声明</a>
+									<a href="">服务协议</a>
+									<a href="">COOKIES</a>
+									Copyright © 2012-2020 华为终端有限公司 版权所有
+									<a href="">粤ICP备19015064号</a> |
+									<a href="">粤公网安备 44190002003939号</a>
+									增值电信业务经营许可证：粤B2-20190762|备案主体编号：44201919072182
+								</p>
+							</div>
+							<ul class="qualifications">
+								<a href="http://privacy.truste.com/privacy-seal/validation?rid=81be9ca0-c821-4e2c-ad4b-ff7cff98f75f&amp;lang=zh-cn" target="_blank"><img src="./img/produceShow/img_001.jpg" /></a>
+								<a href="https://res.vmallres.com/pimages//sale/2018-06/20180615181402966.jpg" target="_blank"><img src="./img/produceShow/img_002.png" /></a>
+							</ul>
+						</div>
+					</div>
+				</div>
+	</body>
+
+</html>

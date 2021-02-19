@@ -1,0 +1,53 @@
+.login_header{
+	line-height: 36px;
+    height: 36px;
+	background-color:#F2F2F2 ;
+}
+.login_header_box{
+	width: 960px;
+	margin:0 auto;
+}
+.login_header_box b{
+	font-size:13px;
+	
+}
+.login_header_box i{
+	font-weight: normal;
+	margin-right:2px ;
+	font-size: 20px;
+	color: #E80000;
+}
+
+
+
+/*底部*/
+.footer{
+	padding-top: 1px;
+	height: 110px;
+	background-color: #F2F2F2 ;
+}
+
+
+
+.footer .footer_box{
+	
+	text-align: center;
+	width: 960px;
+	margin:30px auto;
+}
+
+
+
+.footer .footer_box a{
+	font-size:11px ;
+	
+}
+.footer .footer_box a:hover{
+	text-decoration:  underline;
+}
+
+
+.footer .footer_box p{
+	color: #E7E1E1;
+
+}

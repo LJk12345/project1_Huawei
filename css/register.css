@@ -1,0 +1,447 @@
+
+.content{
+	display: flex;
+	position: relative;
+	width: 960px;
+	margin:0 auto;
+	
+}
+
+.content .content_left{
+	height: 700px;
+
+	
+}
+.content .content_left a{
+	display: block;
+	text-align: left;
+	border-radius: 5px;
+	font-size:13px ;
+	padding:12px 35px ;
+	height:16px;
+	width: 140px;
+}
+.content .content_left a:hover{
+	background-color: #E5F2FF;
+}
+
+.content_left .phone_register{
+	margin-top: 35px;
+	background-color: #F2F2F2;
+	
+}
+
+.content_left .message_register{
+	background-color: #F2F2F2;
+}
+
+
+/*表单区域*/
+.content .content_right{
+	position: absolute;
+	width: 360px;
+	height: 700px;
+	right: 0;
+	left: 0;
+	margin: auto;
+	
+}
+
+
+.content_right .right_head {
+	position: relative;
+	
+	margin:55px auto 40px auto;
+	text-align: center;
+	width: 100%;
+}
+
+.right_head h2{
+	font-size: 25px;
+	font-weight:normal ;
+}
+
+.right_head p{
+	margin-top:5px ;
+	font-size: 14px;
+}
+
+.right_head a{
+	color: #3397FF;
+}
+
+
+.content_right .right_box{
+	position: relative;
+	height: 548px;
+	width: 360px;
+}
+
+
+.right_box form{
+	position: absolute;
+	top: -15px;
+	width:360px ;
+}
+
+
+/*input盒子*/
+.right_box form div{
+	border: 1px solid #F2F2F2;
+	font-size: 12px;
+	padding:12px;
+	height:14px;
+	width: 333px;
+	background-color: #F2F2F2;
+	border-radius: 5px;
+	margin-top: 15px;
+	
+}
+
+.right_box form  .input_tips{
+	display: none;
+	font-size:12px ;
+	margin-top: 15px;
+	color: red;
+}
+
+
+.right_box form div{
+	border: 1px solid #F2F2F2;
+	font-size: 12px;
+	padding:12px;
+	height:14px;
+	width: 333px;
+	background-color: #F2F2F2;
+	border-radius: 5px;
+	margin-top: 25px;
+	
+}
+
+.right_box form input{
+	float: left;
+	font-size: 12px;
+	outline: none;
+	border: 0;
+	background:rgba(0 ,0 ,0 ,0);
+}
+
+
+.right_box form .address {
+	position: relative;
+	z-index: 250;
+	
+}
+
+.right_box form .address span{
+	cursor: pointer;
+	float: right;
+}
+
+.right_box form .address #addresList{
+	display: none;
+	position: absolute;
+	padding: 0;
+	background-color: white;
+	height: 450px;
+	width:200px;
+	right: 0;
+	box-shadow: 0 0 5px 1px #B8B8B8;
+	
+	
+}
+
+/*.right_box form .address #addresList #find{
+	display: block;
+	margin:10px ;
+	background-color:#F2F2F2 ;
+	width:170px ;
+	padding:5px ;
+	outline-color: #80BEFF;
+}*/
+.right_box form .address #addresList p{
+	margin:10px;
+	
+}
+.right_box form .address #addresList ul{
+	display: flex;
+	margin-top: 15px;
+	height: 373px;
+	width: 200px;
+}
+
+.right_box form .address #addresList ul .address_name{
+	width: 170px;
+	height: 372px;
+	overflow: hidden;
+	overflow-y: auto ;
+}
+
+.right_box form .address #addresList ul .address_name h5{
+	line-height: 35px;
+	background-color:#F2F2F2 ;
+	width: 170px;
+	height: 35px;
+	
+}
+
+.right_box form .address #addresList ul .address_name li{
+	text-align: left;
+	line-height: 35px;
+	height: 30px;
+	font-size: 14px;
+
+}
+
+.right_box form .address #addresList ul .address_name li span{
+     	display: block;
+     	height: 29px;
+     	width: 140px;
+     	border-bottom:1px solid   #3397FF;
+}
+
+
+
+.right_box form .address #addresList ul .anchor {
+	width: 30px;
+	text-align: center;
+	
+}
+
+.right_box form .address #addresList ul .anchor li a{
+	display: block;
+	font-size: 10px;
+	-webkit-transform: scale(0.8);
+}
+
+.right_box form .phone{
+	padding-right: 0;
+	width: 96.2%;
+	display: flex  ;
+}
+
+.phone p{
+	margin: 0 20px 0 0;
+	border-right: 1px solid #D9D9D9;
+	width: 80px;
+}
+.phone input{
+	width: 245px;
+}
+
+.right_box form .message{
+	position: relative;
+	z-index: 100;
+}
+
+.right_box form .message input{
+	float: left;
+	
+}
+.message span{
+	color: #00A4FA;
+	opacity: 0.7;
+	text-align: center;
+	float: right;
+	cursor: default;
+	
+}
+
+.right_box  i{
+	float: right;
+	cursor: pointer;
+} 
+
+
+
+.right_box form .password{
+	position: relative;
+	z-index: 200;
+}
+
+
+/*密码规则提示*/
+.right_box form .password .passwordFormat{
+	position: absolute;
+	display: none;
+	background-color: white;
+	height: 105px;
+	width: 200px;
+	top:-140px;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+/*密码规则*/
+#reg1,#reg2  {
+	display: flex;
+	color: rgb(127,127,127);
+	font-size: 11px;
+	
+}
+
+
+/*密码强度*/
+#intensity{
+	
+	margin: 4px 0;
+	width: 150px;
+	height: 2px;
+	background-color:rgb(198,198,198) ;
+}
+
+
+
+/*生日设定*/
+.right_box form .birthday{
+	position: relative;
+	z-index: 150;
+}
+
+
+
+.birthday .birthday_choice{
+    display: flex;
+   float: right;
+   width: 160px;
+   cursor: pointer;
+   
+}
+
+.birthday .birthday_choice {
+	float: right;
+	width:180px;
+}
+
+.birthday .birthday_choice  li{
+	text-align: right;
+    margin-left: 5px;
+    width:60px;
+    font-size: 12px;
+	cursor: pointer;
+	
+}
+
+ .birthday .birthday_choice  li input{
+	cursor: pointer;
+	text-align: right;
+	 width: 30px;
+	
+	
+}
+
+.birthday  li span{
+	font-size: 12px;
+}
+
+.birthday  div {
+	display: none;
+}
+
+
+.birthday .year_list{
+	position: absolute;
+	
+	overflow: hidden;
+    overflow-y: scroll;
+	padding: 2px;
+	box-shadow: 0 0 5px 1px #B8B8B8;
+	right: 130px;
+	width: 50px;
+	height: 150px;
+	background-color: white;
+	
+}
+
+
+
+.birthday  .month_list{
+	position: absolute;
+	overflow: hidden;
+    overflow-y: scroll;
+	padding: 2px;
+	box-shadow: 0 0 5px 1px #B8B8B8;
+	right: 65px;
+	width: 50px;
+	height: 150px;
+	background-color: white;
+}
+
+.birthday  .data_list{
+	position: absolute;
+	overflow: hidden;
+    overflow-y: scroll;
+	padding: 2px;
+	right: 0;
+	box-shadow: 0 0 5px 1px #B8B8B8;
+	height: 150px;
+	width: 50px;
+	background-color: white;
+}
+
+.birthday  div li{
+	text-align: center;
+	margin: auto;
+	height: 20px;
+	border-bottom: 1px solid #00A4FA;
+	cursor: pointer;
+}
+
+
+.birthday .tips{
+	border: 0;
+	display: flex;
+	padding: 0;
+	background-color: white;
+	margin: 0;
+	height: 50px;
+	width: 200px;
+	align-items: center;
+	position: absolute;
+    right: -250px;
+	bottom: 0px;
+}
+
+.birthday .tips span{
+	
+	cursor: default;
+	color: #D6D6D6;
+	margin-right: 20px;
+}
+
+ 
+ .birthday  .tips div{
+ 	display: none;
+ 	background-color: white;
+ 	padding: 2px;
+ 	opacity: 1;
+ 	text-align: center;
+ 	border-radius:5px ;
+ 	box-shadow: 0 0 10px 2px rgb(234,234,234);
+ 	font-size: 12px;
+	width: 150px;
+	height: 40px;
+	
+
+}
+
+
+
+
+.right_box form  .bn {
+	border: 0;
+	outline: none;
+	cursor: default;
+	border-radius:10px ;
+	text-align: center;
+	height: 40px;
+	width: 240px;
+	opacity: 0.5;
+	margin:50px 0px 60px 60px;
+	color: white;
+	font-size: 15px;
+	background-color:#007DFF;
+}
+
+

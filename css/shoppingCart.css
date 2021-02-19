@@ -1,0 +1,479 @@
+body{
+	min-width: 1200px;
+}
+
+
+
+
+
+
+
+.main{
+	background-color:#F5F5F5;
+	padding-top: 10px;
+}
+
+.main_box {
+	position: relative;
+	padding: 1px 0;
+	width: 1200px;
+	margin: auto;
+}
+
+ /*删除提示框*/
+.orderDisplay .deleteTips{
+	display: none;
+	background-color: white;
+	width: 250px;
+	position: absolute;
+	border: 1px solid #CA151E;
+	color: #CA151E;
+	text-align: center;
+	padding: 5px ;
+}
+
+ .deleteTips .deleteTipsBox{
+	display: flex;
+}
+ .deleteTips .deleteTipsBox div{
+	padding: 5px;
+	margin: 20px 0;
+	 width: 90px;
+	 cursor: pointer;
+}
+ .deleteTips .deleteTipsBox .yes{
+	 border: 1px solid #CA151E;
+	 background-color: #CA151E;
+	 margin-left: 10px;
+	 margin-right: 30px;
+	 color: white;
+}
+
+ .deleteTips .deleteTipsBox .yes:hover{
+ 	background-color: #AB0009;
+ }
+ .deleteTips .deleteTipsBox .no{
+	 background-color: #fafafa;
+	 color: black;
+	 border: 1px solid #bbb;
+}
+ .deleteTips .deleteTipsBox .no:hover{
+	background-color: #3A3A3A;
+	color: white;
+}
+
+
+/*登陆提示*/
+.main_box  .loginTips{
+	display: none;
+	height: 50px;
+	font-size: 12px;
+	border: 1px solid #eace85;
+    background: #fffdee;
+    color: #ca141d;
+    line-height: 48px;
+    padding: 0 20px;
+    margin-bottom: 10px;
+}
+
+.main_box  .loginTips a{
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 30px;
+	width:70px ;
+	height: 30px;
+	text-align: center;
+	color: white;
+	font-size:12px ;
+	background-color: #ca141d;
+}
+
+.main_box  .orderDisplay{
+	
+}
+
+.main_box  .orderDisplay .emptyState{
+	display: flex;
+	display: none;
+	background-color: white;
+	height: 500px;
+	justify-content: center;
+	align-items: center;
+}
+
+.main_box  .orderDisplay .emptyState div{
+     text-align: center;	
+}
+
+
+.emptyState div i{
+	display: block;
+	margin: auto;
+	height: 100px;
+	width: 100px;
+	line-height: 100px;
+	font-size:70px;
+	border-radius: 50%;
+	background-color: #F4F4F4;
+	color: #9D9D9D;
+	
+	
+}
+
+.emptyState div p{
+	font-size: 18px;
+	color: #A4A4A4;
+	margin: 30px 0 20px 0;
+}
+
+
+
+.emptyState div a{
+	display: block;
+	width: 172px;
+    height: 46px;
+    line-height: 46px;
+    font-size: 18px;
+    margin: auto;
+    color: white;
+	background-color: #CA141D;
+}
+
+
+/*购物车列表*/
+ .main_box  .orderDisplay .displayStatus {
+ 	position: relative;
+ 	margin-bottom: 20px;
+ }
+ 
+
+ 
+ 
+
+
+/*购物车列表各栏通用样式*/
+.displayStatus ul{
+ 	display: flex;
+ 	padding: 0 40px 0 40px;
+	color: #A4A4A4;
+	font-size: 12px;
+	border-bottom: 1px solid #eaeaea;
+	background-color: white;
+ }
+.displayStatus  li{
+	text-align: center;
+	width: 100px ;
+	margin-left: 30px;
+	align-items: center;
+}
+
+.displayStatus  li span{
+	display: block;
+}
+
+.displayStatus  li div{
+	width: 150px;
+}
+
+/*勾选框样式*/
+.displayStatus  li input[type=checkbox]{
+	margin-right: 10px;
+}
+
+.displayStatus  li b{
+	font-weight: normal;
+
+}
+
+/*列表属性栏样式*/
+.displayStatus .element{
+ 	height: 40px;
+ 	line-height: 40px;
+ }
+
+
+/*商品列表*/
+.displayStatus .displayStatus_list{/
+   position: relative;
+    margin-top: 10px;
+    padding: 20px 40px;
+    font-size: 16px;
+}
+
+ .displayStatus_list img{
+   height: 100px;
+   width: 100px;
+  
+}
+
+
+
+.displayStatus_list li p{
+   font-size: 14px;
+    width:60px;
+    color: #ca141d;
+    line-height: 18px;
+    padding: 0 8px;
+    margin-top:8px;
+    border: 1px solid #ca141d;
+}
+
+ .displayStatus_list  .subtotal{
+   font-weight: bold;
+   color:  #CA151E;
+}
+
+.displayStatus_list li input[type=text]{
+   width: 30px;
+   height: 20px;
+   text-align: center;
+   outline: none;
+   border:1px solid  #d6d6d6;
+   float: left;
+}
+
+
+
+.displayStatus_list li input[type=button]{
+    width: 21px;
+    outline: none;
+    height: 22px;
+    font-size: 16px;
+    border: 1px solid  #d6d6d6;
+    float: left;
+    background-color: white;
+    cursor: pointer;
+    font-weight: bold;
+
+    }
+
+.displayStatus  .displayStatus_list li .deleteNum{
+	border-right: 0;
+	color: #A4A4A4;
+	margin-left:10px;
+	font-size: 14px;
+	cursor: not-allowed;
+}
+
+
+
+
+.addrNum{
+	border-left: 0;
+	font-size: 20px;
+}
+
+
+.displayStatus_list .singleDeletion{
+	   cursor: pointer;
+	   width: 40px;
+	   margin: auto;
+}
+
+/*列表底栏样式*/
+.displayStatus .valuation{
+	height: 60px;
+	margin-top: 10px;
+	padding-right:0;
+}
+
+.valuation li input[type=button]{
+	background-color: white;
+	border: 0;
+	margin-left: 30px;
+    outline: none;
+    font-size: 12px;
+    color: #3A3A3A;
+    
+	
+}
+
+
+
+.displayStatus .valuation .settlementBox{
+	width: 460px;
+}
+
+
+ .settlementBox .settlementBox_left{
+	    text-align: right;
+		float: right;
+}
+
+.settlementBox_left div{
+	position: relative;
+	font-size: 16px;
+	color: #3A3A3A;
+	margin: 5px 0;
+}
+.settlementBox_left div::after{
+	position: absolute;
+	right: -20px;
+	top: 5px;
+	content: '\e60e';
+	color:#F9B79A ;
+	cursor:pointer;
+	
+}
+
+.settlementBox_left div i{ 
+	font-size: 20px;
+	color: #CA151E;
+}
+.settlementBox_left div span{ 
+	font-size: 20px;
+	color: #CA151E;
+}
+
+.settlementBox_left p{
+	font-size: 12px;
+	color: #A4A4A4;
+}
+
+.settlementBox .settlementBox_bn{
+	float: right;
+	width:180px;
+	height: 100%;
+	border: 0;
+	outline: 0;
+	margin-left: 30px;
+	background-color: #CA151E;
+	color: white;
+	font-size: 18px;
+}
+
+
+.main_box .hotProduct{
+}
+
+.main_box  h5{
+	margin: 30px 0 10px 0;
+	font-size: 18px;
+	font-weight: normal;
+}
+.hotProduct .hotShowList{
+	position: relative;
+	height:238px ;
+	padding: 20px 10px;
+	background-color: white;
+	
+}
+
+.hotProduct .hotShowList button{
+	position: absolute;
+	height: 238px;
+	line-height: 238px;
+	font-size: 28px;
+	cursor: pointer;
+	background-color: white;
+	border: 0;
+	outline: 0;
+}
+
+.hotProduct .hotShowList div{
+	padding-top: 1px;
+	width: 1124px;
+	height: 100%;
+	margin: auto;
+	position: relative;
+	overflow: hidden;
+}
+
+.hotProduct .hotShowList div .products{
+	width: 1332px;
+	height: 200px;
+	margin: auto;
+	margin-top: 18px;
+	position: absolute;
+}
+
+.hotProduct .hotShowList div ul li{
+	float: left;
+	width: 222px;
+    text-align: center;
+}
+
+.hotProduct .hotShowList div ul li a img{ 
+	width: 134px;
+	height: 134px;
+	margin: auto;
+}
+
+.hotProduct .hotShowList div ul li a i{ 
+	display: block;
+	font-size: 14px;
+	font-weight:  bold;
+	margin-bottom: 16px;
+	
+}
+.hotProduct .hotShowList div ul li  span{
+	display: block;
+	font-size: 14px;
+	font-weight:  bold;
+}
+
+.deleteProduct {
+	overflow: hidden;
+	height: 181px;
+}
+
+
+
+.deleteProduct ul{
+	display: flex;
+	padding: 0 40px 0 70px;
+	line-height: 40px;
+	height: 40px;
+	color: #A4A4A4;
+	font-size: 12px;
+	border-bottom: 1px solid #eaeaea;
+	background-color: white;
+}
+.deleteProduct .list {
+	line-height:70px;
+	height: 70px;
+	font-size: 16px;
+	border: 0;
+}
+
+.deleteProduct  li{
+	text-align: center;
+	width: 100px ;
+	margin-left: 30px;
+	display: flex;
+	align-items: center;
+}
+
+.deleteProduct  li span{
+	display: block;
+	margin: auto;
+}
+
+
+.deleteProduct .list li p{
+	width: 86px;
+	height: 28px;
+	line-height: 28px;
+	border: 1px solid #ddd;
+	padding: 0;
+	cursor: pointer;
+}
+
+.deleteProduct .list li p:hover{
+	color: #ca141d;
+	border-color: #ca141d;
+}
+
+.must{
+	text-align: center;
+	height: 30px;
+	width: 100%;
+	background-color: white;
+}
+.must a{
+	width: 70px;
+  font-size: 16px;
+	padding:7px 10px ;
+	color: #a4a4a4;
+	cursor: default;
+}

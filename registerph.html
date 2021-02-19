@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="css/register.css" />
+		<link rel="stylesheet" type="text/css" href="css/login_register.css" />
+		<script src="js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/register.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/data.js" type="text/javascript" charset="utf-8"></script>
+		<meta charset="UTF-8">
+		<link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
+		<!--用于设置标题栏显示logo-->
+		<link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+		<!--用于在收藏夹中显示logo-->
+		<title>注册_华为账号</title>
+	</head>
+
+	<body>
+		<div class="header">
+			<div class="header_box">
+				<b><i class="iconfont">&#xe611;</i>HUAWEI&nbsp;&nbsp;<span style="color:#CECECE;">|</span>&nbsp;&nbsp; 华为商城</b>
+			</div>
+		</div>
+		<div class="content">
+			<div class="content_left iconfont">
+				<a href="registerph.html" target="_self" class="phone_register">
+					<span>&#xe627;</span> 手机号注册
+				</a>
+				<a href="registerem.html"  target="_self">
+					<span>&#xe608;</span> 邮件地址注册
+				</a>
+			</div>
+			<div class="content_right iconfont">
+				<div class="right_head">
+					<h2>华为账号注册</h2>
+			        <p>已有帐号， <a href="logIn.html">去登录 ></a></p>
+			    </div>
+			
+            <div class="right_box">
+            	 <form id="form_ph" action="test1.html" method="get">
+            	    <!--地区选择-->
+                     <div class="address">
+				        <input type="text" class="address_tpis" value="中国 " readonly="true"/>
+				        <span>国家/地区 <i>&#xe607;</i></span>
+				        <div id="addresList">
+				        	
+				        	<p>已开通服务的国家:</p>
+				        	<ul>
+				        		<ol class="address_name"></ol>
+				        		<ol class="anchor"></ol>
+				        	</ul>
+				        </div>
+			        </div>
+			        
+			        <!--电话-->
+			        <div class="phone">
+				        <p>+86(中国)<i>&#xe607;</i></p>
+				        <input flag=false id="phone" name="phone" type="text" placeholder="请输入手机号" value="" />
+			        </div>
+			        <p id="phone_tips" class="input_tips">&#xe645;手机号不正确</p>
+			        
+			       <!-- 短信验证码-->
+			        <div class="message">
+				        <input  id="message" type="text" placeholder="短信验证码" maxlength='8' value=""/>
+				            <span messageSendOut=false class="getMessage" >获取验证码</span>
+			        </div>
+			        <p id="message_tips" class="input_tips">'&#xe645;验证码错误'</p>   
+			        
+			         <!-- 密码-->
+			        <div class="password">
+			        	<div class="passwordFormat">
+			            	<p id="passwordFormat_title1">密码需要满足以下要求:</p>
+			            	<p id="reg1"><i style="color: rgb(198,198,198);">&#xe6f1;</i>&nbsp;至少8个字符</p>
+			            	<p id="reg2"><i style="color: rgb(198,198,198);">&#xe6f1;</i>&nbsp;至少含字母和数字,不能包含空格</p>
+			            	<br />
+			            	<p id="passwordFormat_title2">密码强度: <span ></span></p>
+			            	<p id="intensity"></p>
+			            	<p id="reg3">勿使用其他账号密码.</p>
+			            </div>
+			            <input  flag=false id="password" type="password" placeholder="密码" value=""/>
+			            <i class="passShow" >&#xe614;</i>
+			             
+			        </div>
+			        <p id="password_tips" class="input_tips"></p>
+			        
+			        <!--   再次输入密码-->
+		            <div class="nextPassword">
+		  	            <input flag=false id="nextPassword" type="password" placeholder="确认密码" value=""/>
+		  	            <i class="passShow" >&#xe614;</i>
+		            </div>
+		            <p id="nextPassword_tips" class="input_tips"></p>
+		            
+		            <!-- 生日设置-->
+                    <div class="birthday">
+				        <p style="float: left;">出生日期</p>
+				            <ul class='birthday_choice'>
+					            <li><input id="year" type="text" readonly="true" value=""/><span>年&#xe607;</span></li>
+					            <li><input id="month" type="text" readonly="true" value=""/><span>月&#xe607;</span> </li>
+					            <li><input id="data"   type="text" readonly="true" value=""/><span>日&#xe607;</span></li>
+				            </ul>
+				            <div class="year_list" ></div>
+				            <div class="month_list"></div>
+				            <div class="data_list"></div>
+				        <div class="tips iconfont">
+			                <span>&#xe67f;</span>
+			                <div>您的出生日期用于确定您在法律范围内可以使用的服务</div>
+		                </div>
+		            </div>
+			        <input class="bn" id="form_phSubmit" type="submit" value="注册"/>
+            	</form>
+		    </div>
+		
+		    </div>
+		</div>
+
+	
+	
+	
+	<div class="footer">
+		<div class="footer_box">
+			<p >
+			<a href="#">华为帐号与云空间用户协议</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+			<a href="#">关于华为帐号与云空间隐私的声明</a>&nbsp;&nbsp; |&nbsp;&nbsp;
+			<a href="#">常见问题</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+			<a href="#"> Cookies</a>
+			</p>
+			<span style="color: #000; opacity: 0.3; font-size:10px ;">华为账号 版权所有 © 2011-2020</span>
+		</div>
+	</div>
+	</body>
+</html>
